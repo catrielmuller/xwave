@@ -13,12 +13,26 @@ export default class extends Phaser.State {
     //
     // load your assets
     //
-    this.load.image('mushroom', 'assets/images/mushroom2.png')
+    this.load.image('bg', 'assets/images/bg.jpg')
+    this.load.image('start', 'assets/images/start.jpg')
+    this.load.image('versus', 'assets/images/versus.png')
+    this.load.image('winone', 'assets/images/winone.jpg')
+    this.load.image('wintwo', 'assets/images/wintwo.jpg')
+    this.load.image('pone', 'assets/images/pone.png')
+    this.load.image('ptwo', 'assets/images/ptwo.png')
     this.load.image('ball', 'assets/images/ball.png')
+    this.load.image('pad', 'assets/images/pad.png')
+    this.load.image('indicator', 'assets/images/indicator.png')
+
+    this.load.audio('main', ['assets/music/music.ogg']);
+
   }
 
   create () {
-    this.state.start('Game')
+    this.music = this.game.add.audio('main');
+    this.music.loop = true;
+    this.music.play();
+    this.state.start('Start')
   }
 
 }

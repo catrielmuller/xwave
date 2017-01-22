@@ -1,5 +1,5 @@
 export default {
-  gameWidth: 760,
-  gameHeight: 400,
+  gameWidth: 1280,
+  gameHeight: 720,
   localStorageName: 'xwave'
 }
